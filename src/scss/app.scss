@@ -1,0 +1,35 @@
+@import './libs/fonts';
+@import './libs/normalize';
+@import './media';
+.wrapper {
+  font-family: Ubuntu;
+  background: rgb(245, 244, 255);
+  padding: 0 10px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 462px;
+  @include mobile {
+    grid-template-rows: 1fr 500px;
+  }
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  display: grid;
+  grid-template: 64px 1fr/1fr;
+}
+
+.link-blue {
+  color: rgb(255, 255, 255);
+  border-radius: 16px;
+  background: rgb(0, 60, 255);
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.3s;
+  &:hover {
+    background-color: rgb(119, 150, 192);
+  }
+}

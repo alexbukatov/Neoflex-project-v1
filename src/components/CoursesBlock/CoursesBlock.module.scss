@@ -1,0 +1,79 @@
+.currency {
+  margin-top: 48px;
+  border-radius: 28px;
+  box-shadow: 0px 2px 4px 0px rgba(187, 187, 187, 0.2), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(0deg, rgba(178, 178, 178, 0.8) 8.055%, rgba(178, 178, 178, 0) 67.93%),
+    rgba(244, 244, 244, 0.9);
+  padding: 42px 32px 32px 32px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__topHeader {
+    color: rgb(28, 28, 30);
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &__topUpdate {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__rateHeader {
+    margin-top: 34px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__rateMiddle {
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 640px) {
+      margin-top: 23px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__rateList {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 32px;
+    @media (max-width: 640px) {
+      display: grid;
+      grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+      gap: 40px;
+    }
+  }
+
+  &__rateItem {
+    display: inline-flex;
+    gap: 20px;
+    color: rgb(128, 128, 128);
+    font-size: 20px;
+    font-weight: 700;
+    &__name {
+      color: rgb(128, 128, 128);
+    }
+    &__text {
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  &__rateBottom {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 38px;
+  }
+}

@@ -1,0 +1,63 @@
+@import '../../scss/media';
+
+.footer {
+  background: rgba(178, 178, 178, 0.2);
+  padding: 96px 10px 92px 10px;
+  @include mobile {
+    padding: 20px 10px;
+  }
+  &__content {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  &__headContactsItems li:nth-child(2) {
+    margin-top: 17px;
+  }
+  &__headContactsItem {
+    &__tel {
+      color: rgba(0, 0, 0, 1);
+      font-size: 30px;
+      font-weight: 700;
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+    &__malito {
+      color: rgba(45, 55, 72, 1);
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 42px;
+    margin-top: 40px;
+  }
+  &__link {
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &__separator {
+    display: inline-block;
+    margin-top: 40px;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.81);
+  }
+  &__textCookie {
+    margin-top: 36px;
+    color: rgba(45, 55, 72, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23.58px;
+  }
+}

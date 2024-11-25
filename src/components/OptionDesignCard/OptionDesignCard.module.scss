@@ -1,0 +1,45 @@
+@import '../../scss/media';
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  gap: 160px;
+  margin-top: 130px;
+  @media (max-width: 1315px) {
+    gap: 40px;
+  }
+  @include tablet {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  &__block {
+    color: rgba(28, 28, 30, 1);
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+    @media (max-width: 1060px) {
+      font-size: 40px;
+    }
+    @media (max-width: 560px) {
+      font-size: 30px;
+    }
+    @include tablet {
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__blockHeader {
+    padding-bottom: 40px;
+  }
+  &__image {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 16px;
+    @media (max-width: 560px) {
+      grid-template: repeat(4, 1fr) / 1fr;
+    }
+  }
+}
