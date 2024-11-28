@@ -2,13 +2,14 @@
 @import './libs/normalize';
 @import './media';
 @import './variables';
+
 .wrapper {
   font-family: Ubuntu;
   background: $white;
   padding: 0 10px;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 462px;
+  grid-template-rows: 1fr 460px;
   @include mobile {
     grid-template-rows: 1fr 500px;
   }
@@ -16,7 +17,7 @@
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1300px;
+  max-width: 130rem;
   display: grid;
   grid-template: 64px 1fr/1fr;
 }
@@ -38,10 +39,10 @@ button {
 
 .link-blue {
   color: $white;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   background: $blue;
-  padding: 16px;
-  font-size: 16px;
+  padding: 1.6rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-align: center;
   transition: 0.3s;

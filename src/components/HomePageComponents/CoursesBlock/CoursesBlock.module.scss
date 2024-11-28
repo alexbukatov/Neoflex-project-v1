@@ -1,68 +1,70 @@
-@import '../../../scss/variables';
+@import '/src/scss/media';
+@import '/src/scss/variables';
+
 .currency {
-  margin-top: 48px;
-  border-radius: 28px;
+  margin-top: 4.8rem;
+  border-radius: 2.8rem;
   box-shadow: 0px 2px 4px 0px rgba(187, 187, 187, 0.2), 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
   background: linear-gradient(0deg, rgba(178, 178, 178, 0.8) 8.055%, rgba(178, 178, 178, 0) 67.93%),
     rgba(244, 244, 244, 0.9);
-  padding: 42px 32px 32px 32px;
+  padding: 4.2rem 3.2rem 3.2rem 3.2rem;
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 2rem;
     color: $black;
   }
 
   &__topHeader {
     color: $black;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 500;
   }
 
   &__topUpdate {
     color: $black;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
   }
 
   &__rateHeader {
-    margin-top: 34px;
+    margin-top: 3.4rem;
     color: $black;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 500;
   }
 
   &__rateMiddle {
-    margin-top: 23px;
+    margin-top: 2.3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     @media (max-width: 640px) {
-      margin-top: 23px;
+      margin-top: 2.3rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 2rem;
     }
   }
 
   &__rateList {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-    gap: 32px;
+    gap: 3.2rem;
     @media (max-width: 640px) {
       display: grid;
       grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-      gap: 40px;
+      gap: 4rem;
     }
   }
 
   &__rateItem {
     display: inline-flex;
-    gap: 20px;
+    gap: 2rem;
     color: $gray;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     &__name {
       color: $gray;
@@ -74,8 +76,8 @@
 
   &__rateBottom {
     color: $white;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    margin-top: 38px;
+    margin-top: 3.8rem;
   }
 }

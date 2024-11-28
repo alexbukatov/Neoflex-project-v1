@@ -1,43 +1,44 @@
-@import '../../../scss/media';
+@import '/src/scss/media';
 @import '/src/scss/variables';
+
 .option {
   display: flex;
   justify-content: space-between;
-  gap: 160px;
-  margin-top: 130px;
+  gap: 16rem;
+  margin-top: 13rem;
   @media (max-width: 1315px) {
-    gap: 40px;
+    gap: 4rem;
   }
   @include tablet {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 5rem;
   }
   &__block {
     color: $black;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 700;
     text-align: left;
     @media (max-width: 1060px) {
-      font-size: 40px;
+      font-size: 4rem;
     }
     @media (max-width: 560px) {
-      font-size: 30px;
+      font-size: 3rem;
     }
     @include tablet {
-      max-width: 520px;
+      max-width: 52rem;
       display: flex;
       flex-direction: column;
     }
   }
   &__blockHeader {
-    padding-bottom: 40px;
+    padding-bottom: 4rem;
   }
   &__image {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    gap: 16px;
+    gap: 1.6rem;
     @media (max-width: 560px) {
       grid-template: repeat(4, 1fr) / 1fr;
     }

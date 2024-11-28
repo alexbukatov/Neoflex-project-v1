@@ -1,23 +1,24 @@
-@import '../../../scss/variables';
+@import '/src/scss/variables';
+
 .map {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 58px;
+  margin-top: 5.8rem;
   color: $black;
   &__header {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 500;
   }
   &__text {
-    margin-top: 35px;
-    font-size: 16px;
+    margin-top: 3.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
   }
   &__image {
-    margin-top: 55px;
+    margin-top: 5.5rem;
     max-width: 100%;
     object-fit: cover;
   }

@@ -2,7 +2,7 @@
 @import '/src/scss/variables';
 .navigate {
   display: flex;
-  gap: 50px;
+  gap: 5rem;
   @include tablet {
     display: none;
   }
