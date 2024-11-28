@@ -1,11 +1,13 @@
-@import '../../scss/media';
-
+@import '../../../scss/media';
+@import '../../../scss/variables';
 .newsForm {
   margin-top: 180px;
   padding-bottom: 100px;
+
   @include tablet {
     margin-top: 70px;
   }
+
   &__items {
     display: flex;
     flex-direction: column;
@@ -19,63 +21,86 @@
     justify-content: center;
     align-items: center;
     gap: 35px;
-    color: rgba(28, 28, 30, 1);
+    color: $black;
     font-size: 30px;
     font-weight: 700;
     text-align: center;
+
     @include tablet {
       gap: 20px;
     }
   }
+
   &__header {
-    color: rgba(235, 128, 29, 1);
+    color: $orange;
     font-size: 24px;
   }
+
   &__text {
     font-weight: 500;
   }
+
   &__form {
     width: 460px;
+    margin-top: 70px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.1);
+    background: $white;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+    @include mobile {
+      width: 330px;
+    }
+  }
+
+  &__formWrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 22px 32px;
-    margin-top: 70px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.1);
-    background: rgb(255, 255, 255);
-    @include tablet {
-      margin-top: 40px;
-      width: 290px;
-    }
+    width: 100%;
+    box-sizing: border-box;
   }
+
   &__formInput {
+    flex: 1; /* Заполняет оставшееся место */
+    min-width: 0; /* Предотвращает переполнение */
     padding-left: 12px;
-    flex-shrink: 1;
     font-size: 20px;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
+
     &::placeholder {
-      color: rgb(144, 146, 176);
+      color: $gray;
     }
+
     @include tablet {
-      width: 110px;
+      font-size: 16px; /* Уменьшение шрифта на мобильных устройствах */
     }
   }
+
   &__formButton {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    padding: 13px 30px 13px 15px;
+    padding: 13px 20px;
     border-radius: 20px;
     background: rgb(104, 109, 241);
-    color: rgb(255, 255, 255);
+    color: $white;
     font-size: 16px;
     font-weight: 700;
-    cursor: pointer;
-    &:hover {
-      background: rgb(119, 150, 192);
+
+    @include tablet {
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      font-size: 0; /* Скрыть текст */
+      border-radius: 50%; /* Делает кнопку круглой */
+      gap: 0px;
     }
   }
 }

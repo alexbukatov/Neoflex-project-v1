@@ -1,0 +1,15 @@
+@import '../../scss/media';
+@import '/src/scss/variables';
+.navigate {
+  display: flex;
+  gap: 50px;
+  @include tablet {
+    display: none;
+  }
+  &__item {
+    a {
+      color: $black;
+      transition: 0.3s;
+    }
+  }
+}

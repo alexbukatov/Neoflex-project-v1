@@ -1,17 +1,16 @@
-import React from 'react';
-import CoursesBlock from '../components/CoursesBlock';
-import MapBlock from '../components/MapBlock';
-import FormSupport from '../components/FormSupport';
-import OptionDesignCard from '../components/OptionDesignCard/indes';
-import AdvantagesBlock from '../components/AdvantagesBlock';
+import {
+  OptionDesignCard,
+  AdvantagesBlock,
+  CoursesBlock,
+  MapBlock,
+  FormSupport,
+} from '../components/index';
 
-const Home:React.FC = () => {
+const Home = () => {
   return (
     <>
-      <section>
-        <OptionDesignCard />
-        <AdvantagesBlock />
-      </section>
+      <OptionDesignCard />
+      <AdvantagesBlock />
       <CoursesBlock />
       <MapBlock />
       <FormSupport />

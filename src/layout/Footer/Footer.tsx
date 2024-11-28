@@ -1,22 +1,22 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import logoNeoflex from '../../assets/svg/logoNeoflex.svg';
 import styles from './Footer.module.scss';
 
-const Footer: React.FC = () => {
-  const linksList = [
-    'About bank',
-    'Ask a Question',
-    'Quality of service',
-    'Requisites',
-    'Press center',
-    'Bank career',
-    'Investors',
-    'Analytics',
-    'Business and processes',
-    'Compliance and business ethics',
-  ];
+const LINKS_FOOTER:string[] = [
+  'About bank',
+  'Ask a Question',
+  'Quality of service',
+  'Requisites',
+  'Press center',
+  'Bank career',
+  'Investors',
+  'Analytics',
+  'Business and processes',
+  'Compliance and business ethics',
+];
 
+const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__content}>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
           </address>
         </div>
         <div className={styles.footer__links}>
-          {linksList.map((string: string, index: number) => (
+          {LINKS_FOOTER.map((string: string, index: number) => (
             <Link
               to="/"
               key={string}

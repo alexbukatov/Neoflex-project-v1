@@ -1,3 +1,4 @@
+@import '../../../scss/variables';
 .map {
   display: flex;
   flex-direction: column;
@@ -5,7 +6,7 @@
   align-items: center;
   text-align: center;
   margin-top: 58px;
-  color: rgba(28, 28, 30, 1);
+  color: $black;
   &__header {
     font-size: 30px;
     font-weight: 500;

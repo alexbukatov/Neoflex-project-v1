@@ -1,4 +1,5 @@
-@import '../../scss/media';
+@import '../../../scss/media';
+@import '../../../scss/variables';
 
 .advantages {
   font-family: Rubik;
@@ -21,12 +22,12 @@
     gap: 32px;
   }
   &__header {
-    color: rgba(11, 19, 42, 1);
+    color: $black;
     font-size: 35px;
     font-weight: 500;
   }
   &__desc {
-    color: rgba(79, 86, 101, 1);
+    color: $gray;
     font-size: 16px;
     font-weight: 400;
   }
@@ -41,7 +42,7 @@
     gap: 18px;
   }
   &__itemText {
-    color: rgba(79, 86, 101, 1);
+    color: $gray;
     font-size: 14px;
     font-weight: 400;
   }

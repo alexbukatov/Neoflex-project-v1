@@ -24,6 +24,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h2 {
+  all: unset;
+  display: block;
+}
+
 a {
   text-decoration: none;
 }
@@ -54,7 +59,6 @@ input::-ms-clear {
   display: none;
 }
 button {
-  cursor: pointer;
   text-decoration: none;
   all: unset;
 }

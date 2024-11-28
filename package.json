@@ -15,7 +15,6 @@
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "sass": "^1.81.0",
-    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "sass-loader": "^16.0.3"
+    "sass-loader": "^16.0.3",
+    "typescript": "^5.7.2"
   }
 }

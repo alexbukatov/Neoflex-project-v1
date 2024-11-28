@@ -1,3 +1,4 @@
+@import '../../../scss/variables';
 .currency {
   margin-top: 48px;
   border-radius: 28px;
@@ -10,23 +11,24 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    color: $black;
   }
 
   &__topHeader {
-    color: rgb(28, 28, 30);
+    color: $black;
     font-size: 30px;
     font-weight: 500;
   }
 
   &__topUpdate {
-    color: rgb(0, 0, 0);
+    color: $black;
     font-size: 16px;
     font-weight: 500;
   }
 
   &__rateHeader {
     margin-top: 34px;
-    color: rgb(0, 0, 0);
+    color: $black;
     font-size: 20px;
     font-weight: 500;
   }
@@ -59,19 +61,19 @@
   &__rateItem {
     display: inline-flex;
     gap: 20px;
-    color: rgb(128, 128, 128);
+    color: $gray;
     font-size: 20px;
     font-weight: 700;
     &__name {
-      color: rgb(128, 128, 128);
+      color: $gray;
     }
     &__text {
-      color: rgb(0, 0, 0);
+      color: $black;
     }
   }
 
   &__rateBottom {
-    color: rgb(255, 255, 255);
+    color: $white;
     font-size: 20px;
     font-weight: 700;
     margin-top: 38px;

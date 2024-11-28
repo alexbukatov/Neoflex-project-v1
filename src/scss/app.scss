@@ -1,9 +1,10 @@
 @import './libs/fonts';
 @import './libs/normalize';
 @import './media';
+@import './variables';
 .wrapper {
   font-family: Ubuntu;
-  background: rgb(245, 244, 255);
+  background: $white;
   padding: 0 10px;
   min-height: 100vh;
   display: grid;
@@ -20,16 +21,32 @@
   grid-template: 64px 1fr/1fr;
 }
 
+a {
+  transition: 0.3s;
+  &:hover {
+    color: $orange;
+  }
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background: $light-blue;
+  }
+}
+
 .link-blue {
-  color: rgb(255, 255, 255);
+  color: $white;
   border-radius: 16px;
-  background: rgb(0, 60, 255);
+  background: $blue;
   padding: 16px;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   transition: 0.3s;
   &:hover {
-    background-color: rgb(119, 150, 192);
+    background-color: $light-blue;
+    color: $white;
   }
 }
