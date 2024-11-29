@@ -4,7 +4,7 @@
 @import '/src/scss/variables/font-size';
 
 .option {
-  @include flexbox(row, space-between, stretch, 16rem);
+  @include flexbox(row, space-between, stretch, 15rem);
   margin-top: 13rem;
   @media (max-width: 1315px) {
     gap: 4rem;
@@ -18,10 +18,13 @@
     font-size: $font-size-xl;
     font-weight: 700;
     text-align: left;
+    @media (max-width: 1040px) {
+      font-size: calc($font-size-xl - 1rem);
+    }
     @include tablet {
       font-size: $font-size-l;
     }
-    @media (max-width: 560px) {
+    @include bigMobile {
       font-size: calc($font-size-l - 0.5rem);
     }
     @include tablet {
@@ -34,7 +37,7 @@
   }
   &__image {
     @include grid(repeat(2, 1fr) / repeat(2, 1fr), 1.6rem);
-    @media (max-width: 560px) {
+    @include bigMobile {
       @include grid(repeat(4, 1fr) / 1fr, 1.6rem);
     }
   }

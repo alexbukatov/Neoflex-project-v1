@@ -3,6 +3,13 @@
     @content;
   }
 }
+
+@mixin bigMobile {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: 920px) {
     @content;

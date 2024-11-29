@@ -40,7 +40,7 @@
   &__rateMiddle {
     margin: 2.3rem 0 3.8rem 0;
     @include flexbox(row, space-between, center, null);
-    @media (max-width: 640px) {
+    @include bigMobile {
       margin-top: 2.3rem;
       @include flexbox(column, space-between, center, 2rem);
     }
@@ -48,7 +48,7 @@
 
   &__rateList {
     @include grid(repeat(2, 1fr) / repeat(3, 1fr), 3.2rem);
-    @media (max-width: 640px) {
+    @include bigMobile {
       @include grid(repeat(3, 1fr) / repeat(2, 1fr), 4rem);
     }
   }

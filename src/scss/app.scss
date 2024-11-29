@@ -19,8 +19,7 @@
   margin: 0 auto;
   width: 100%;
   max-width: 130rem;
-  display: grid;
-  grid-template: 64px 1fr/1fr;
+  @include grid(64px 1fr / 1fr, null);
 }
 .content {
   padding: 0 10px;
