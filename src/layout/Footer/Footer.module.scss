@@ -1,5 +1,7 @@
-@import '/src/scss/media';
-@import '/src/scss/variables';
+@import '/src/scss/mixins/media';
+@import '/src/scss/variables/variables';
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
 
 .footer {
   background: rgba(178, 178, 178, 0.2);
@@ -12,10 +14,7 @@
     max-width: 130rem;
   }
   &__head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+    @include flexbox(row, space-between, center, 2rem);
   }
   &__headContactsItems li:nth-child(2) {
     margin-top: 1.7rem;
@@ -23,7 +22,7 @@
   &__headContactsItem {
     &__tel {
       color: $black;
-      font-size: 3rem;
+      font-size: $font-size-l;
       font-weight: 700;
       @include mobile {
         font-size: 2.2rem;
@@ -31,7 +30,7 @@
     }
     &__malito {
       color: rgba(45, 55, 72, 1);
-      font-size: 1.6rem;
+      font-size: $font-size-m;
       font-weight: 500;
     }
   }
@@ -44,7 +43,7 @@
   }
   &__link {
     color: $black;
-    font-size: 1.6rem;
+    font-size: $font-size-m;
     font-weight: 500;
   }
   &__separator {
@@ -57,7 +56,7 @@
   &__textCookie {
     margin-top: 3.6rem;
     color: $gray;
-    font-size: 1.6rem;
+    font-size: $font-size-m;
     font-weight: 500;
     line-height: 2.3rem;
   }

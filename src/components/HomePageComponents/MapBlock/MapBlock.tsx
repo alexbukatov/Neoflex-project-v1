@@ -10,19 +10,21 @@ const MapBlock = () => {
         aria-label="Header: You can use our services anywhere in the world">
         You can use our services anywhere in the world
       </h3>
-      <p
-        className={styles.map__text}
-        tabIndex={1}
-        aria-label="Text: Withdraw and transfer money online through our application">
-        Withdraw and transfer money online through our application
-      </p>
-      <img
-        className={styles.map__image}
-        src={MapImage}
-        alt="World map"
-        aria-label="World map showing service availability"
-        tabIndex={3}
-      />
+      <figure>
+        <figcaption
+          className={styles.map__text}
+          tabIndex={1}
+          aria-label="Text: Withdraw and transfer money online through our application">
+          Withdraw and transfer money online through our application
+        </figcaption>
+        <img
+          className={styles.map__image}
+          src={MapImage}
+          alt="World map"
+          aria-label="World map showing service availability"
+          tabIndex={3}
+        />
+      </figure>
     </section>
   );
 };

@@ -1,5 +1,5 @@
-@import '../../scss/media';
-@import '/src/scss/variables';
+@import '/src/scss/mixins/media';
+@import '/src/scss/variables/variables';
 .navigate {
   display: flex;
   gap: 5rem;
@@ -9,7 +9,7 @@
   &__item {
     a {
       color: $black;
-      transition: 0.3s;
+      transition: $transition-duration;
     }
   }
 }

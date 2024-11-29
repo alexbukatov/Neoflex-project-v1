@@ -1,13 +1,14 @@
-@import '/src/scss/variables';
-
+@import '/src/scss/mixins/media';
+@import '/src/scss/variables/variables';
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
 .header {
+  padding: 0 10px;
   margin-top: 0.7rem;
-  font-size: 1.6rem;
+  font-size: $font-size-m;
   font-weight: 700;
 
   &__items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox(row, space-between, center, null);
   }
 }

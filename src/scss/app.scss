@@ -1,17 +1,18 @@
 @import './libs/fonts';
 @import './libs/normalize';
-@import './media';
-@import './variables';
+@import './mixins/media';
+@import './variables/variables';
+@import './variables/font-size';
+@import './mixins/mixin';
 
 .wrapper {
   font-family: Ubuntu;
   background: $white;
-  padding: 0 10px;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 460px;
+  @include grid(1fr 460px / 1fr, null);
+
   @include mobile {
-    grid-template-rows: 1fr 500px;
+    @include grid(1fr 500px / 1fr, null);
   }
 }
 .container {
@@ -21,9 +22,12 @@
   display: grid;
   grid-template: 64px 1fr/1fr;
 }
+.content {
+  padding: 0 10px;
+}
 
 a {
-  transition: 0.3s;
+  transition: $transition-duration;
   &:hover {
     color: $orange;
   }
@@ -31,7 +35,7 @@ a {
 
 button {
   cursor: pointer;
-  transition: 0.3s;
+  transition: $transition-duration;
   &:hover {
     background: $light-blue;
   }
@@ -42,10 +46,10 @@ button {
   border-radius: 1.6rem;
   background: $blue;
   padding: 1.6rem;
-  font-size: 1.6rem;
+  font-size: $font-size-m;
   font-weight: 700;
   text-align: center;
-  transition: 0.3s;
+  transition: $transition-duration;
   &:hover {
     background-color: $light-blue;
     color: $white;

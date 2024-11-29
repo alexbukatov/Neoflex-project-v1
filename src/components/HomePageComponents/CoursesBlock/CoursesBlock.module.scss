@@ -1,5 +1,7 @@
-@import '/src/scss/media';
-@import '/src/scss/variables';
+@import '/src/scss/mixins/media';
+@import '/src/scss/variables/variables';
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
 
 .currency {
   margin-top: 4.8rem;
@@ -9,54 +11,45 @@
     rgba(244, 244, 244, 0.9);
   padding: 4.2rem 3.2rem 3.2rem 3.2rem;
   &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+    @include flexbox(row, space-between, center, 2rem);
     color: $black;
   }
 
   &__topHeader {
     color: $black;
-    font-size: 3rem;
+    font-size: $font-size-l;
     font-weight: 500;
   }
 
   &__topUpdate {
     color: $black;
-    font-size: 1.6rem;
+    font-size: $font-size-m;
     font-weight: 500;
+  }
+
+  &__rate {
+    font-size: 2rem;
   }
 
   &__rateHeader {
     margin-top: 3.4rem;
     color: $black;
-    font-size: 2rem;
     font-weight: 500;
   }
 
   &__rateMiddle {
-    margin-top: 2.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 2.3rem 0 3.8rem 0;
+    @include flexbox(row, space-between, center, null);
     @media (max-width: 640px) {
       margin-top: 2.3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
+      @include flexbox(column, space-between, center, 2rem);
     }
   }
 
   &__rateList {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-    gap: 3.2rem;
+    @include grid(repeat(2, 1fr) / repeat(3, 1fr), 3.2rem);
     @media (max-width: 640px) {
-      display: grid;
-      grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-      gap: 4rem;
+      @include grid(repeat(3, 1fr) / repeat(2, 1fr), 4rem);
     }
   }
 
@@ -64,7 +57,6 @@
     display: inline-flex;
     gap: 2rem;
     color: $gray;
-    font-size: 2rem;
     font-weight: 700;
     &__name {
       color: $gray;
@@ -76,8 +68,6 @@
 
   &__rateBottom {
     color: $white;
-    font-size: 2rem;
     font-weight: 700;
-    margin-top: 3.8rem;
   }
 }

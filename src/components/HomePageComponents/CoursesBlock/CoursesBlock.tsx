@@ -23,7 +23,7 @@ const CoursesBlock = () => {
         <h2 className={styles.currency__topHeader}>Exchange rate in internet bank</h2>
         <p className={styles.currency__topUpdate}>Update every 15 minutes, MSC 09.08.2022</p>
       </div>
-      <div>
+      <div className={styles.currency__rate}>
         <h3 className={styles.currency__rateHeader}>Currency</h3>
         <div className={styles.currency__rateMiddle}>
           <ul className={styles.currency__rateList}>
@@ -38,8 +38,8 @@ const CoursesBlock = () => {
           </ul>
           <img src={currencySvg} alt="Currency illustration" aria-label="Currency illustration" />
         </div>
-        <Link to="/">
-          <p className={styles.currency__rateBottom}>All courses</p>
+        <Link to="/" className={styles.currency__rateBottom}>
+          All courses
         </Link>
       </div>
     </section>

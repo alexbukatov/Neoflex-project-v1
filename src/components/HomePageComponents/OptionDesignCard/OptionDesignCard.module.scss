@@ -1,46 +1,41 @@
-@import '/src/scss/media';
-@import '/src/scss/variables';
+@import '/src/scss/mixins/media';
+@import '/src/scss/variables/variables';
+@import '/src/scss/mixins/mixin';
+@import '/src/scss/variables/font-size';
 
 .option {
-  display: flex;
-  justify-content: space-between;
-  gap: 16rem;
+  @include flexbox(row, space-between, stretch, 16rem);
   margin-top: 13rem;
   @media (max-width: 1315px) {
     gap: 4rem;
   }
   @include tablet {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(column, center, center, null);
     margin-top: 5rem;
   }
   &__block {
     color: $black;
-    font-size: 4.8rem;
+    font-size: $font-size-xl;
     font-weight: 700;
     text-align: left;
-    @media (max-width: 1060px) {
-      font-size: 4rem;
+    @include tablet {
+      font-size: $font-size-l;
     }
     @media (max-width: 560px) {
-      font-size: 3rem;
+      font-size: calc($font-size-l - 0.5rem);
     }
     @include tablet {
       max-width: 52rem;
-      display: flex;
-      flex-direction: column;
+      @include flexbox(column, flex-start, stretch, null);
     }
   }
   &__blockHeader {
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
   }
   &__image {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    gap: 1.6rem;
+    @include grid(repeat(2, 1fr) / repeat(2, 1fr), 1.6rem);
     @media (max-width: 560px) {
-      grid-template: repeat(4, 1fr) / 1fr;
+      @include grid(repeat(4, 1fr) / 1fr, 1.6rem);
     }
   }
 }

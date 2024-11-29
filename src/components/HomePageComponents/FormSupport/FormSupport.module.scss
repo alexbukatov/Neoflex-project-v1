@@ -1,5 +1,7 @@
-@import '/src/scss/media';
-@import '/src/scss/variables';
+@import '/src/scss/mixins/media';
+@import '/src/scss/variables/variables';
+@import '/src/scss/variables/font-size';
+@import '/src/scss/mixins/mixin';
 
 .newsForm {
   margin-top: 18rem;
@@ -10,20 +12,13 @@
   }
 
   &__items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(column, center, center, null);
   }
 
   &__textBlock {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3.5rem;
+    @include flexbox(column, center, center, 3.5rem);
     color: $black;
-    font-size: 3rem;
+    font-size: $font-size-l;
     font-weight: 700;
     text-align: center;
 
@@ -42,13 +37,14 @@
   }
 
   &__form {
-    width: 460px;
+    width: 520px;
     margin-top: 7rem;
     border-radius: 20px;
     box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.1);
     background: $white;
 
     @include tablet {
+      width: 480px;
       margin-top: 4rem;
     }
     @include mobile {
@@ -57,17 +53,15 @@
   }
 
   &__formWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexbox(row, space-between, center, null);
     padding: 2.2rem 3.2rem;
     width: 100%;
     box-sizing: border-box;
   }
 
   &__formInput {
-    flex: 1; /* Заполняет оставшееся место */
-    min-width: 0; /* Предотвращает переполнение */
+    flex: 1;
+    min-width: 0;
     padding-left: 1.2rem;
     font-size: 2rem;
     font-family: 'Nunito', sans-serif;
@@ -78,29 +72,26 @@
     }
 
     @include tablet {
-      font-size: 1.6rem; /* Уменьшение шрифта на мобильных устройствах */
+      font-size: $font-size-m;
     }
   }
 
   &__formButton {
     flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.2rem;
+    @include flexbox(row, center, center, 1.2rem);
     padding: 1.3rem 2rem;
     border-radius: 2rem;
     background: rgb(104, 109, 241);
     color: $white;
-    font-size: 1.6rem;
+    font-size: $font-size-m;
     font-weight: 700;
 
-    @include tablet {
+    @include mobile {
       padding: 10px;
       width: 40px;
       height: 40px;
       font-size: 0; /* Скрыть текст */
-      border-radius: 50%; /* Делает кнопку круглой */
+      border-radius: 50%;
       gap: 0rem;
     }
   }
