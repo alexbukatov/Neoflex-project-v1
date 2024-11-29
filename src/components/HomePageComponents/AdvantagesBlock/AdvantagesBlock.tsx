@@ -18,10 +18,9 @@ const AdvantagesBlock = () => {
           src={imageAdvantages}
           alt="Advantages illustration"
           aria-label="Advantages illustration"
-          tabIndex={1}
         />
         <figcaption className={styles.advantages__content}>
-          <h2 className={styles.advantages__header}>We Provide Many Features You Can Use</h2>
+          <h3>We Provide Many Features You Can Use</h3>
           <p className={styles.advantages__desc}>
             You can explore the features that we provide with fun and have their own functions each
             feature
@@ -34,7 +33,6 @@ const AdvantagesBlock = () => {
                   src={checkMark}
                   alt="check"
                   aria-label="Checkmark"
-                  tabIndex={index + 2}
                 />
                 <p className={styles.advantages__itemText}>{string}</p>
               </li>

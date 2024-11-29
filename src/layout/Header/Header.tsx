@@ -11,7 +11,7 @@ const Header = () => {
           <img src={logoSvg} alt="Neoflex logo" aria-label="Neoflex logo" tabIndex={1} />
         </Link>
         <NavHeader />
-        <Link to="/" className="link-blue" aria-label="Go to Online Bank" tabIndex={2}>
+        <Link to="/" className="link-blue" aria-label="Go to Online Bank" tabIndex={6}>
           Online Bank
         </Link>
       </div>

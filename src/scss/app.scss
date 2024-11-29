@@ -9,11 +9,7 @@
   font-family: Ubuntu;
   background: $white;
   min-height: 100vh;
-  @include grid(1fr 460px / 1fr, null);
-
-  @include mobile {
-    @include grid(1fr 500px / 1fr, null);
-  }
+  @include grid(1fr auto / 1fr, null);
 }
 .container {
   margin: 0 auto;
@@ -23,6 +19,16 @@
 }
 .content {
   padding: 0 10px;
+}
+
+h3 {
+  //для всех заголовков , кроме optionDisingCard
+  color: $black;
+  font-size: $font-size-l;
+  font-weight: 500;
+  @include tablet {
+    font-size: calc($font-size-l - 0.7rem);
+  }
 }
 
 a {

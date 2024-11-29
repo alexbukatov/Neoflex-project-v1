@@ -14,11 +14,10 @@ const OptionDesignCard = () => {
       <div className={styles.option__block}>
         <h2
           className={styles.option__blockHeader}
-          tabIndex={1}
           aria-label="Choose the design you like and apply for a card right now">
           Choose the design you like and apply for card right now
         </h2>
-        <Link to="/" className="link-blue" aria-label="Choose your card design" tabIndex={2}>
+        <Link to="/" className="link-blue" aria-label="Choose your card design" tabIndex={7}>
           Choose the card
         </Link>
       </div>
@@ -29,7 +28,6 @@ const OptionDesignCard = () => {
             src={item}
             alt={`Card design ${index + 1}`}
             aria-label={`Preview of card design ${index + 1}`}
-            tabIndex={index + 3}
           />
         ))}
       </div>

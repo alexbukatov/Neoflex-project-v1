@@ -12,19 +12,18 @@ const MenuBurger = () => {
   };
 
   return (
-    <nav className={styles.navigate}>
+    <nav className={styles.navigate} tabIndex={-1}>
       <img
         onClick={onClickMenuBurger}
         src={menuSvg}
         alt="Menu button"
         aria-label="Toggle navigation menu"
-        tabIndex={1}
       />
       {isVisible && (
         <ul className={styles.navigate__items}>
           {NAV_ITEMS.map((string: string, index: number) => (
             <li onClick={onClickMenuBurger} key={string} className={styles.navigate__item}>
-              <Link to="/" aria-label={`Navigate to ${string}`} tabIndex={index + 2}>
+              <Link to="/" aria-label={`Navigate to ${string}`}>
                 {string}
               </Link>
             </li>

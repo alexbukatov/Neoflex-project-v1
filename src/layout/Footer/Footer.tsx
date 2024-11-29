@@ -1,9 +1,8 @@
-
 import { Link } from 'react-router-dom';
 import logoNeoflex from '../../assets/svg/logoNeoflex.svg';
 import styles from './Footer.module.scss';
 
-const LINKS_FOOTER:string[] = [
+const LINKS_FOOTER: string[] = [
   'About bank',
   'Ask a Question',
   'Quality of service',
@@ -21,13 +20,8 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footer__content}>
         <div className={styles.footer__head}>
-          <Link to='/'>
-            <img
-              src={logoNeoflex}
-              alt="Neoflex logo"
-              aria-label="Neoflex logo"
-              tabIndex={1}
-            />
+          <Link to="/">
+            <img src={logoNeoflex} alt="Neoflex logo" aria-label="Neoflex logo" tabIndex={11} />
           </Link>
           <address>
             <ul className={styles.footer__headContactsItems}>
@@ -36,7 +30,7 @@ const Footer = () => {
                   className={styles.footer__headContactsItem__tel}
                   href="tel: +7 (495) 984 25 13"
                   aria-label="Call +7 (495) 984 25 13"
-                  tabIndex={2}>
+                  tabIndex={12}>
                   +7 (495) 984 25 13
                 </a>
               </li>
@@ -45,8 +39,7 @@ const Footer = () => {
                   className={styles.footer__headContactsItem__malito}
                   href="mailto:info@neoflex.ru"
                   aria-label="Email info@neoflex.ru"
-                  tabIndex={3}
-                >
+                  tabIndex={13}>
                   info@neoflex.ru
                 </a>
               </li>
@@ -60,8 +53,7 @@ const Footer = () => {
               key={string}
               className={styles.footer__link}
               aria-label={`Navigate to ${string}`}
-              tabIndex={4 + index}
-            >
+              tabIndex={14 + index}>
               {string}
             </Link>
           ))}
@@ -69,8 +61,8 @@ const Footer = () => {
         <span className={styles.footer__separator}></span>
         <p className={styles.footer__textCookie}>
           We use cookies to personalize our services and improve the user experience of our website.
-          Cookies are small files containing information about previous visits to a website. If you do
-          not want to use cookies, please change your browser settings.
+          Cookies are small files containing information about previous visits to a website. If you
+          do not want to use cookies, please change your browser settings.
         </p>
       </div>
     </footer>
