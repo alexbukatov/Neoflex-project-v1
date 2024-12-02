@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Home from '../pages/Home';
+import Loan from 'pages/Loan';
 
 const Layout = () => {
   return (
@@ -11,6 +12,7 @@ const Layout = () => {
         <main className="content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/loan" element={<Loan />} />
           </Routes>
         </main>
       </div>

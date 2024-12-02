@@ -1,9 +1,7 @@
-import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MenuBurger.module.scss';
 import menuSvg from 'assets/svg/menu-burger.svg';
 import { NAV_ITEMS } from 'ui/NavHeader/NavHeader';
-import { click } from '@testing-library/user-event/dist/click';
 
 const MenuBurger = () => {
   return (
@@ -18,9 +16,9 @@ const MenuBurger = () => {
         />
       </label>
       <ul className={styles.menuBurger__items}>
-        {NAV_ITEMS.map((string: string) => (
+        {NAV_ITEMS.map((string: string, index: number) => (
           <li key={string} className={styles.menuBurger__item}>
-            <Link to="/" aria-label={`Navigate to ${string}`}>
+            <Link to="/" aria-label={`Navigate to ${string}`} tabIndex={2 + index}>
               {string}
             </Link>
           </li>

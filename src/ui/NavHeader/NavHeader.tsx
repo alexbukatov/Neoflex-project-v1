@@ -1,4 +1,4 @@
-import MenuBurger from '../../components/HomePageComponents/MenuBurger/MenuBurger';
+import menuSvg from 'assets/svg/menu-burger.svg';
 import styles from './NavHeader.module.scss';
 import { Link } from 'react-router-dom';
 
@@ -6,13 +6,19 @@ export const NAV_ITEMS: string[] = ['Credit card', 'Product', 'Account', 'Resour
 
 const NavHeader = () => {
   return (
-    <nav>
-      <MenuBurger />
-      <ul className={styles.navigate}>
-        {NAV_ITEMS.map((string: string, index: number) => (
-          <li key={string} className={styles.navigate__item}>
-            <Link to="/" aria-label={`Navigate to ${string}`} tabIndex={2 + index}>
-              {string}
+    <nav className={styles.menuBurger}>
+      <input id="menuToogle" className={styles.menuBurger__toogle} type="checkbox" />
+      <label
+        className={styles.menuBurger__btn}
+        htmlFor="menuToogle"
+        aria-label="Toggle navigation menu">
+        <img className={styles.menuBurger__image} src={menuSvg} alt="Menu button" />
+      </label>
+      <ul className={styles.menuBurger__items}>
+        {NAV_ITEMS.map((item) => (
+          <li key={item} className={styles.menuBurger__item}>
+            <Link to="/" aria-label={`Navigate to ${item}`}>
+              {item}
             </Link>
           </li>
         ))}

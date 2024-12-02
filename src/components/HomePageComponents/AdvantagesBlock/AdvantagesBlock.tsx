@@ -1,4 +1,4 @@
-import imageAdvantages from 'assets/homeImage/Illustration 2.png';
+import imageAdvantages from 'assets/homeImage/Advantages.png';
 import checkMark from 'assets/svg/check.svg';
 import styles from './AdvantagesBlock.module.scss';
 

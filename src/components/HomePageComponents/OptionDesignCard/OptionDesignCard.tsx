@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import image1 from 'assets/img-card/cardImage1.png';
-import image2 from 'assets/img-card/cardImage2.png';
-import image3 from 'assets/img-card/cardImage3.png';
-import image4 from 'assets/img-card/cardImage4.png';
+import image1 from 'assets/homeImage/img-card/cardImage1.png';
+import image2 from 'assets/homeImage/img-card/cardImage2.png';
+import image3 from 'assets/homeImage/img-card/cardImage3.png';
+import image4 from 'assets/homeImage/img-card/cardImage4.png';
 import styles from './OptionDesignCard.module.scss';
 
 const IMAGE_ITEMS: string[] = [image1, image2, image3, image4];
