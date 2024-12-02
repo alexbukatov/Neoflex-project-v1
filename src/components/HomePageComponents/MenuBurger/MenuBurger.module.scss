@@ -3,37 +3,55 @@
 @import '/src/scss/variables/font-size';
 @import '/src/scss/mixins/mixin';
 
-.navigate {
-  img {
+.menuBurger {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  &__toogle {
     display: none;
-    @include tablet {
-      display: block;
+  }
+
+  &__btn {
+    img {
+      transition: $transition-duration;
     }
   }
 
   &__items {
-    display: flex;
-    gap: 5rem;
-    position: relative;
-    @include tablet {
-      padding: 1rem;
-      position: absolute;
-      top: 6rem;
-      @include flexbox(column, flex-start, stretch, 1rem);
-      border-radius: 20px;
-      box-shadow: 0px 10px 20px 0px rgba(54, 58, 120, 0.1);
-      background: $white;
-      z-index: 100;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 28rem;
+    height: 100%;
+    padding: 10rem 0;
+    text-align: center;
+    background-color: $gray;
+    box-shadow: 1px 0 6px rgba($color: $black, $alpha: 0.8);
+    transition: left $transition-duration, visibility $transition-duration;
+    @include bigMobile {
+      width: 20rem;
+    }
+    @include mobile {
+      width: 14rem;
     }
   }
 
   &__item {
-    a {
-      color: $black;
-      transition: $transition-duration;
+    padding: 1.5rem 0;
+    color: $white;
+    font-size: calc($font-size-m + 0.4rem);
+  }
+
+  &__toogle:checked {
+    & ~ .menuBurger__btn img {
+      transform: rotate(90deg);
     }
-    a:hover {
-      color: $orange;
+
+    & ~ .menuBurger__items {
+      visibility: visible;
+      left: 0;
     }
   }
 }

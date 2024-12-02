@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import image1 from 'assets/img-card/cardImage1.png';
 import image2 from 'assets/img-card/cardImage2.png';

@@ -19,6 +19,9 @@
       @include flexbox(column, center, center, 2rem);
     }
   }
+  &__link {
+    cursor: pointer;
+  }
   &__headContactsItems li:nth-child(2) {
     margin-top: 1.7rem;
   }

@@ -19,7 +19,7 @@ const FormSupport = () => {
             <img src={envelopeSvg} alt="Envelope icon" aria-label="Envelope icon" />
             <input
               className={styles.newsForm__formInput}
-              type="email"
+              type="text"
               id="email"
               placeholder="Your email"
               aria-label="Enter your email to subscribe"

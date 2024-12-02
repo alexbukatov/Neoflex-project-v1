@@ -28,7 +28,7 @@ const CoursesBlock = () => {
             {RATE_ITEMS.map((currencyObj, index: number) => (
               <li key={currencyObj.name} className={styles.currency__rateItem}>
                 <p className={styles.currency__rateItem__name}>{currencyObj.name}:</p>
-                <p tabIndex={index + 1}>{currencyObj.price}</p>
+                <p>{currencyObj.price}</p>
               </li>
             ))}
           </ul>

@@ -16,7 +16,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,9 +58,11 @@ aside {
 input::-ms-clear {
   display: none;
 }
-button {
+button,
+a {
   text-decoration: none;
   all: unset;
+  cursor: pointer;
 }
 address {
   font-style: normal;

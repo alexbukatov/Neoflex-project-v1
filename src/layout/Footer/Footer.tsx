@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoNeoflex from '../../assets/svg/logoNeoflex.svg';
 import styles from './Footer.module.scss';
 
@@ -16,13 +16,24 @@ const LINKS_FOOTER: string[] = [
 ];
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo(0, 0);
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__content}>
         <div className={styles.footer__head}>
-          <Link to="/">
-            <img src={logoNeoflex} alt="Neoflex logo" aria-label="Neoflex logo" tabIndex={11} />
-          </Link>
+          <div className={styles.footer__link} onClick={handleLogoClick} role="button">
+            <img src={logoNeoflex} alt="Neoflex logo" aria-label="Neoflex logo" />
+          </div>
           <address>
             <ul className={styles.footer__headContactsItems}>
               <li className={styles.footer__headContactsItem}>
@@ -30,7 +41,7 @@ const Footer = () => {
                   className={styles.footer__headContactsItem__tel}
                   href="tel: +7 (495) 984 25 13"
                   aria-label="Call +7 (495) 984 25 13"
-                  tabIndex={12}>
+                  tabIndex={11}>
                   +7 (495) 984 25 13
                 </a>
               </li>
@@ -39,7 +50,7 @@ const Footer = () => {
                   className={styles.footer__headContactsItem__malito}
                   href="mailto:info@neoflex.ru"
                   aria-label="Email info@neoflex.ru"
-                  tabIndex={13}>
+                  tabIndex={12}>
                   info@neoflex.ru
                 </a>
               </li>
@@ -53,7 +64,7 @@ const Footer = () => {
               key={string}
               className={styles.footer__link}
               aria-label={`Navigate to ${string}`}
-              tabIndex={14 + index}>
+              tabIndex={13 + index}>
               {string}
             </Link>
           ))}

@@ -3,6 +3,7 @@ import styles from './NavHeader.module.scss';
 import { Link } from 'react-router-dom';
 
 export const NAV_ITEMS: string[] = ['Credit card', 'Product', 'Account', 'Resources'];
+
 const NavHeader = () => {
   return (
     <nav>

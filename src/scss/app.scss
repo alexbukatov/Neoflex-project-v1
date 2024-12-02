@@ -36,12 +36,18 @@ a {
   &:hover {
     color: $orange;
   }
+  &:focus {
+    color: $orange;
+  }
 }
 
 button {
   cursor: pointer;
   transition: $transition-duration;
   &:hover {
+    background: $light-blue;
+  }
+  &:focus {
     background: $light-blue;
   }
 }
@@ -56,6 +62,10 @@ button {
   text-align: center;
   transition: $transition-duration;
   &:hover {
+    background-color: $light-blue;
+    color: $white;
+  }
+  &:focus {
     background-color: $light-blue;
     color: $white;
   }

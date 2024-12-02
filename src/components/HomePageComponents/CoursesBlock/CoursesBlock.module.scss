@@ -24,6 +24,9 @@
       'rate rate'
       'link data';
   }
+  @include bigMobile {
+    padding: 2.5rem 2rem 2rem 2rem;
+  }
 
   &__update {
     grid-area: data;
@@ -77,5 +80,6 @@
     grid-area: link;
     color: $white;
     font-weight: 700;
+    align-self: center;
   }
 }

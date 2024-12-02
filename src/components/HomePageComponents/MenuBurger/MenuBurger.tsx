@@ -1,36 +1,32 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MenuBurger.module.scss';
 import menuSvg from 'assets/svg/menu-burger.svg';
 import { NAV_ITEMS } from 'ui/NavHeader/NavHeader';
+import { click } from '@testing-library/user-event/dist/click';
 
 const MenuBurger = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const onClickMenuBurger = () => {
-    setIsVisible(!isVisible);
-  };
-
   return (
-    <nav className={styles.navigate} tabIndex={-1}>
-      <img
-        onClick={onClickMenuBurger}
-        src={menuSvg}
-        alt="Menu button"
-        aria-label="Toggle navigation menu"
-      />
-      {isVisible && (
-        <ul className={styles.navigate__items}>
-          {NAV_ITEMS.map((string: string, index: number) => (
-            <li onClick={onClickMenuBurger} key={string} className={styles.navigate__item}>
-              <Link to="/" aria-label={`Navigate to ${string}`}>
-                {string}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </nav>
+    <div className={styles.menuBurger}>
+      <input id="menuToogle" className={styles.menuBurger__toogle} type="checkbox" />
+      <label className={styles.menuBurger__btn} htmlFor="menuToogle">
+        <img
+          className={styles.menuBurger__image}
+          src={menuSvg}
+          alt="Menu button"
+          aria-label="Toggle navigation menu"
+        />
+      </label>
+      <ul className={styles.menuBurger__items}>
+        {NAV_ITEMS.map((string: string) => (
+          <li key={string} className={styles.menuBurger__item}>
+            <Link to="/" aria-label={`Navigate to ${string}`}>
+              {string}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
